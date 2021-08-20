@@ -6,9 +6,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Table;
 using System.IO;
 using System.Threading.Tasks;
-
-
-
+using TodoCsharp.Commun.Models;
+using Newtonsoft.Json;
+using TodoCsharp.Commun.Response;
+using TodoCsharp.AzureFunction.Entities;
+using System;
 
 namespace TodoCsharp.AzureFunction.Function
 {
@@ -25,15 +27,40 @@ namespace TodoCsharp.AzureFunction.Function
             string name = req.Query["name"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-         
-        
+            Todo todo = JsonConvert.DeserializeObject<Todo>(requestBody);
 
+            if(string.IsNullOrEmpty(todo?.TaskDescription))
+            {
+                return new BadRequestObjectResult(new Response
+                {
+                    isSuccess = false,
+                    Mesages = "Request must have a  TaskDescription"
+                });             
+            }
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+            TodoEntity todoEntity = new TodoEntity
+            {
+                CreatedTime = DateTime.UtcNow,
+                ETag = "*",
+                isCompleted = false,
+                PartitionKey = "TODO",
+                RowKey = Guid.NewGuid().ToString(),
+                TaskDescription = todo.TaskDescription
+            };
 
-            return new OkObjectResult(responseMessage);
+            TableOperation AddTableOperation = TableOperation.Insert(todoEntity);
+            await todoTable.ExecuteAsync(AddTableOperation);
+
+            string message = "Todo was storaged inside the table";
+            log.LogInformation(message);
+
+            return new OkObjectResult(new Response { 
+            
+                isSuccess = true,
+                Mesages = message,
+                Result = todoEntity
+            
+            });
         }
     }
 }

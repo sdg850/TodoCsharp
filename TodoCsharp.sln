@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoCsharp.AzureFunction", "TodoCsharp.AzureFunction\TodoCsharp.AzureFunction.csproj", "{5F966152-32A6-4171-8E7C-45861747046A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{422C84C7-F712-48EE-8FE7-F36D5C17D113} = {422C84C7-F712-48EE-8FE7-F36D5C17D113}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoCsharp.Test", "TodoCsharp.Test\TodoCsharp.Test.csproj", "{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCsharp.Commun", "TodoCsharp.Commun\TodoCsharp.Commun.csproj", "{422C84C7-F712-48EE-8FE7-F36D5C17D113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoCsharp.Commun", "TodoCsharp.Commun\TodoCsharp.Commun.csproj", "{422C84C7-F712-48EE-8FE7-F36D5C17D113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
