@@ -1,4 +1,8 @@
-﻿namespace TodoCsharp.common.Responses
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TodoCsharp.Commun.Response
 {
     public class Response
     {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCsharp.common", "TodoCsharp.common\TodoCsharp.common.csproj", "{934065FE-CE32-4C1F-B3E2-026F263DCE2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoCsharp.AzureFunction", "TodoCsharp.AzureFunction\TodoCsharp.AzureFunction.csproj", "{5F966152-32A6-4171-8E7C-45861747046A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCsharp.AzureFunction", "TodoCsharp.AzureFunction\TodoCsharp.AzureFunction.csproj", "{5F966152-32A6-4171-8E7C-45861747046A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoCsharp.Test", "TodoCsharp.Test\TodoCsharp.Test.csproj", "{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCsharp.Test", "TodoCsharp.Test\TodoCsharp.Test.csproj", "{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCsharp.Commun", "TodoCsharp.Commun\TodoCsharp.Commun.csproj", "{422C84C7-F712-48EE-8FE7-F36D5C17D113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{934065FE-CE32-4C1F-B3E2-026F263DCE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{934065FE-CE32-4C1F-B3E2-026F263DCE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{934065FE-CE32-4C1F-B3E2-026F263DCE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{934065FE-CE32-4C1F-B3E2-026F263DCE2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F966152-32A6-4171-8E7C-45861747046A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F966152-32A6-4171-8E7C-45861747046A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F966152-32A6-4171-8E7C-45861747046A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D10AB8-8C9D-4ECF-8AB9-EACD1E4C3C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422C84C7-F712-48EE-8FE7-F36D5C17D113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422C84C7-F712-48EE-8FE7-F36D5C17D113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422C84C7-F712-48EE-8FE7-F36D5C17D113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422C84C7-F712-48EE-8FE7-F36D5C17D113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
