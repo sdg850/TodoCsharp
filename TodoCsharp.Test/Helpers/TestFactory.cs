@@ -28,27 +28,27 @@ namespace TodoCsharp.Test.Helpers
             };
         }
 
-        public static DefaultHttpRequest CreateHttpRequest(Guid todoId, Todo todoRequest)
+        public static DefaultHttpRequest CreateHttpRequest(Guid Id, Todo Request)
         {
-            string request = JsonConvert.SerializeObject(todoRequest);
+            string request = JsonConvert.SerializeObject(Request);
             return new DefaultHttpRequest(new DefaultHttpContext())
             {
                 Body = GenerateStreamFromString(request),
-                Path = $"/{todoId}"
+                Path = $"/{Id}"
             };
         }
 
-        public static DefaultHttpRequest CreateHttpRequest(Guid todoId)
+        public static DefaultHttpRequest CreateHttpRequest(Guid Id)
         {
             return new DefaultHttpRequest(new DefaultHttpContext())
             {
-                Path = $"/{todoId}"
+                Path = $"/{Id}"
             };
         }
 
-        public static DefaultHttpRequest CreateHttpRequest(Todo todoRequest)
+        public static DefaultHttpRequest CreateHttpRequest(Todo Request)
         {
-            string request = JsonConvert.SerializeObject(todoRequest);
+            string request = JsonConvert.SerializeObject(Request);
             return new DefaultHttpRequest(new DefaultHttpContext())
             {
                 Body = GenerateStreamFromString(request)
@@ -60,7 +60,7 @@ namespace TodoCsharp.Test.Helpers
             return new DefaultHttpRequest(new DefaultHttpContext());
         }
 
-        public static Todo GetTodoRequest()
+        public static Todo GetRequest()
         {
             return new Todo
             {
